@@ -1,0 +1,1133 @@
+fileFormatVersion: 2
+guid: 3645157de6c5e5440a5f0304e1928cf9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7647021807372530038
+    second: Elven Archer_0
+  - first:
+      213: -4881566526168209420
+    second: Elven Archer_1
+  - first:
+      213: 7844701479466861627
+    second: Elven Archer_2
+  - first:
+      213: 4692242031591759480
+    second: Elven Archer_3
+  - first:
+      213: 8603637748000016021
+    second: Elven Archer_4
+  - first:
+      213: -7462333417807750349
+    second: Elven Archer_5
+  - first:
+      213: 6821388773391610148
+    second: Elven Archer_6
+  - first:
+      213: -154188487661109114
+    second: Elven Archer_7
+  - first:
+      213: -7375883863831495991
+    second: Elven Archer_8
+  - first:
+      213: 453134459927557800
+    second: Elven Archer_9
+  - first:
+      213: 2200556609762214553
+    second: Elven Archer_10
+  - first:
+      213: -7132925246253215922
+    second: Elven Archer_11
+  - first:
+      213: -1107140610325209337
+    second: Elven Archer_12
+  - first:
+      213: -1862604617860863355
+    second: Elven Archer_13
+  - first:
+      213: -5135462839268898410
+    second: Elven Archer_14
+  - first:
+      213: 6710850927084147880
+    second: Elven Archer_15
+  - first:
+      213: 7198528415869210037
+    second: Elven Archer_16
+  - first:
+      213: -8053447803426347902
+    second: Elven Archer_17
+  - first:
+      213: -6845566217112122521
+    second: Elven Archer_18
+  - first:
+      213: 3645119920717697301
+    second: Elven Archer_19
+  - first:
+      213: 4329552296659052545
+    second: Elven Archer_20
+  - first:
+      213: -8487800881604050625
+    second: Elven Archer_21
+  - first:
+      213: 8852842965806018496
+    second: Elven Archer_22
+  - first:
+      213: -6733944816624531656
+    second: Elven Archer_23
+  - first:
+      213: -6620853845186516779
+    second: Elven Archer_24
+  - first:
+      213: -766868968335305517
+    second: Elven Archer_25
+  - first:
+      213: 4839742360231502492
+    second: Elven Archer_26
+  - first:
+      213: -7856050641374685498
+    second: Elven Archer_27
+  - first:
+      213: -8587065758672745704
+    second: Elven Archer_28
+  - first:
+      213: 3557068570267915007
+    second: Elven Archer_29
+  - first:
+      213: 7932213817237577961
+    second: Elven Archer_30
+  - first:
+      213: 5143982243525635900
+    second: Elven Archer_31
+  - first:
+      213: 5761737940516712421
+    second: Elven Archer_32
+  - first:
+      213: -7241305621080552312
+    second: Elven Archer_33
+  - first:
+      213: -4238679469609280237
+    second: Elven Archer_34
+  - first:
+      213: -8929547854781589497
+    second: Elven Archer_35
+  - first:
+      213: 474931410605897380
+    second: Elven Archer_36
+  - first:
+      213: 3167745549165526003
+    second: Elven Archer_37
+  - first:
+      213: 3713989015138082120
+    second: Elven Archer_38
+  - first:
+      213: 1870260485957183126
+    second: Elven Archer_39
+  - first:
+      213: -1579534072627622452
+    second: Elven Archer_40
+  - first:
+      213: 8874699602664447367
+    second: Elven Archer_41
+  - first:
+      213: -5862500188524624643
+    second: Elven Archer_42
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Elven Archer_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 579
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b88e825d2149f498621a863028e481
+      internalID: 7647021807372530038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 580
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbf10ec4f502f84dae68749540c2203
+      internalID: -4881566526168209420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 581
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ad9a9ba0a9bdd4db589e17e483c434
+      internalID: 7844701479466861627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 583
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa465723ce95609468cd25ee25eb3d02
+      internalID: 4692242031591759480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 578
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979807343f1e7ba45890e089985c487b
+      internalID: 8603637748000016021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 503
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69574fac583a8548b3cd340c276478d
+      internalID: -7462333417807750349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 508
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e18fc68f4c54944bc41a770251e4b2
+      internalID: 6821388773391610148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 504
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61920f030b10b3449bf47d59064e5c95
+      internalID: -154188487661109114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_8
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 508
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675806174c0766743975a975e3bffce7
+      internalID: -7375883863831495991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_9
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 504
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a370f9112f4944b976bbc45e3260b5
+      internalID: 453134459927557800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 431
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a260d0e60688b478b74a6d1d5def0d
+      internalID: 2200556609762214553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 432
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82746c3f30568b439307ee014d133fe
+      internalID: -7132925246253215922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_12
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 432
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2970f161b4b020247bdcdfaa6f25e8b0
+      internalID: -1107140610325209337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 434
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0df847130b16d46a2b6d80056a299a
+      internalID: -1862604617860863355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_14
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 430
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781f63fe9c90f224e834a9287e826927
+      internalID: -5135462839268898410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 356
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7deb573f851f440934bf7620641600
+      internalID: 6710850927084147880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 361
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f539c39020cfc418c17d24f2c06e52
+      internalID: 7198528415869210037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_17
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 359
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61366b02cb395f44daeb83d03c1115cb
+      internalID: -8053447803426347902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_18
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 364
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cabafd9c47f8144d8c15a936928756a
+      internalID: -6845566217112122521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_19
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 358
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c0f93df386b8940a8387494c8cfb7a
+      internalID: 3645119920717697301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 283
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d424c892a0aa4c642a7ae33fdca56224
+      internalID: 4329552296659052545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_21
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 288
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953245370afbd8647a5a4a8c7494a119
+      internalID: -8487800881604050625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_22
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 284
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e09483def17d6d42b88793aab32dfc5
+      internalID: 8852842965806018496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_23
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 288
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09626bfe6ea12344ae66d92c3c4213b
+      internalID: -6733944816624531656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_24
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 284
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d5a19bcb795214cb5f61d29bd491f2
+      internalID: -6620853845186516779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 212
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d23f66a3ef5bc44ba99e4bf11289fb
+      internalID: -766868968335305517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_26
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 208
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc31bc6457e3e044b596e82225d79ba
+      internalID: 4839742360231502492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 215
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239d01532b83a584ab0dd135f94db100
+      internalID: -7856050641374685498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_28
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 212
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f5d8e74a72d554eba1ab86f0ffadf5
+      internalID: -8587065758672745704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_29
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 213
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264145cea58652c4082e0b57a4718b44
+      internalID: 3557068570267915007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 137
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef0f779622f7c845a0c7b62956aa3c3
+      internalID: 7932213817237577961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_31
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 134
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa420ae4cf0e8384c98a1bb164e19e3a
+      internalID: 5143982243525635900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_32
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 142
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51953a126842d548b662d853e4b3a58
+      internalID: 5761737940516712421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_33
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 137
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f40086ab58997428a298244421b271
+      internalID: -7241305621080552312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_34
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 138
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a988637094f87ba428e30b70e29e83b1
+      internalID: -4238679469609280237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_35
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 62
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10e2de2377907541b69e7e3d4d3fedf
+      internalID: -8929547854781589497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_36
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d947e8bf5d885eb41adab5e1943da499
+      internalID: 474931410605897380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_37
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 70
+        width: 51
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a249e5814465e2a45b274f41613cb792
+      internalID: 3167745549165526003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_38
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 64
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9827cf7aa8c1b3d41a775fd3e433eba5
+      internalID: 3713989015138082120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_39
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 101
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f859811fb5fa248b48d984011931d9
+      internalID: 1870260485957183126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_40
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 65
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b23c4546d35c5d4e91071264f2a6d6d
+      internalID: -1579534072627622452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_41
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a813ac9b7798a71419255d28bb76d1a3
+      internalID: 8874699602664447367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elven Archer_42
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 6
+        width: 90
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c6c835b96ff44469f062b8c956dd80
+      internalID: -5862500188524624643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c6c31fcda7f916c45831d988538ef71e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
