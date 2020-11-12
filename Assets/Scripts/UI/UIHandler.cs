@@ -13,13 +13,23 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private UIPanel_Minimap minimap;
     [SerializeField] private UIPanel_SelectionDetails selectionDetails;
     [SerializeField] private UIPanel_CommandCard commandCard;
-    
+
+    public void UpdatePanels(Player localPlayer)
+    {
+        List<Actor> selectedActorList = localPlayer.GetSelection();
+        Actor selectedRelevantActor = localPlayer.GetSelectionRelevantActor();
+
+        selectionDetails.UpdatePanel(selectedActorList);
+        commandCard.UpdatePanel(selectedRelevantActor);
+    }
+
     public bool HasMenuOpen()
     {
         //TODO: For now, no menu exists
         return false;
     }
 
+    //TODO: make this return an MenuInput and use this in UIManager
     public void ToogleMenu(MenuInput menuInput)
     {
         if (!HasMenuOpen())
@@ -74,14 +84,5 @@ public class UIHandler : MonoBehaviour
         selectionBox.anchoredPosition = selectionBoxRect.center;
         selectionBox.sizeDelta = selectionBoxRect.size;
         selectionBox.gameObject.SetActive(true);
-    }
-
-    public void UpdatePanels(Player localPlayer)
-    {
-        List<Actor> selectedActorList = localPlayer.GetSelectedActorList();
-        Actor selectedRelevantActor = localPlayer.GetSelectedRelevantActor();
-
-        selectionDetails.UpdatePanel(selectedActorList);
-        commandCard.UpdatePanel(selectedRelevantActor);
     }
 }

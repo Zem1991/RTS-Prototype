@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3598318032411962166}
   - component: {fileID: 3639909471988254194}
   m_Layer: 0
-  m_Name: Ranger
+  m_Name: Footman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 8603637748000016021, guid: 3645157de6c5e5440a5f0304e1928cf9,
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -1623733986296450111, guid: efee5418389eeaf4e83d10b2416e2b6d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.25
 --- !u!114 &3598318032411962166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3598318032411962167}
-  gameName: Ranger
+  gameName: Footman
   owner: {fileID: 0}
-  portraitImage: {fileID: 7576617242518483205, guid: 73c91d39463042a4fbc6d0c08e7994c0,
+  portraitImage: {fileID: 184950751378207249, guid: 73c91d39463042a4fbc6d0c08e7994c0,
     type: 3}
-  buttonImage: {fileID: 7576617242518483205, guid: 73c91d39463042a4fbc6d0c08e7994c0,
+  buttonImage: {fileID: 184950751378207249, guid: 73c91d39463042a4fbc6d0c08e7994c0,
     type: 3}
   commandCard: {fileID: 3639909471988254194}
   actionCommandCurrent: {fileID: 0}

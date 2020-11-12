@@ -11,11 +11,11 @@ public class UIPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        InputManager.Instance.EnterPanelUnderCursor(this);
+        UIManager.Instance.EnterPanelUnderCursor(this);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        InputManager.Instance.ExitPanelUnderCursor(this);
+        UIManager.Instance.ExitPanelUnderCursor(this);
     }
 }

@@ -6,12 +6,8 @@ using UnityEngine;
 public class InputManager : AbstractSingleton<InputManager>
 {
     [Header("Self references")]
-    [SerializeField] private CursorHandler cursorHandler;
     [SerializeField] private InputHandler inputHandler;
-
-    [Header("Menu processing")]
-    [SerializeField] private bool hasMenuOpen;
-    [SerializeField] private UIPanel panelUnderCursor;
+    [SerializeField] private CursorHandler cursorHandler;
 
     [Header("Action processing")]
     [SerializeField] private ActionInput actionInput;
@@ -19,10 +15,13 @@ public class InputManager : AbstractSingleton<InputManager>
 
     private void Update()
     {
+        UIManager uim = UIManager.Instance;
+        UIPanel panelUnderCursor = uim.GetPanelUnderCursor();
+
         UpdateMenus();
-        if (!hasMenuOpen)
+        if (!uim.HasMenuOpen())
         {
-            CursorActions();
+            CursorActions(panelUnderCursor);
 
             //switch (actionInput)
             //{
@@ -39,12 +38,9 @@ public class InputManager : AbstractSingleton<InputManager>
         }
     }
 
-    public bool IsActionInputNone() { return actionInput == ActionInput.NONE; }
-    public bool IsActionInputSelectOption() { return actionInput == ActionInput.SELECT_OPTION; }
-    public bool IsActionInputSelectTarget() { return actionInput == ActionInput.SELECT_TARGET; }
-
-    public void EnterPanelUnderCursor(UIPanel uiPanel) { panelUnderCursor = uiPanel; }
-    public void ExitPanelUnderCursor(UIPanel uiPanel) { if (panelUnderCursor == uiPanel) panelUnderCursor = null; }
+    //public bool IsActionInputNone() { return actionInput == ActionInput.NONE; }
+    //public bool IsActionInputSelectOption() { return actionInput == ActionInput.SELECT_OPTION; }
+    //public bool IsActionInputSelectTarget() { return actionInput == ActionInput.SELECT_TARGET; }
 
     private void UpdateMenus()
     {
@@ -58,13 +54,13 @@ public class InputManager : AbstractSingleton<InputManager>
 
         UIManager uim = UIManager.Instance;
         uim.ToogleMenu(newMenuInput);
-        hasMenuOpen = uim.HasMenuOpen();
     }
 
-    private void CursorActions()
+    private void CursorActions(UIPanel panelUnderCursor)
     {
         UIManager uim = UIManager.Instance;
         PlayerManager pm = PlayerManager.Instance;
+        ActorManager am = ActorManager.Instance;
 
         bool selection = inputHandler.CursorSelection();
         bool selectionDown = inputHandler.CursorSelectionDown();
@@ -76,7 +72,11 @@ public class InputManager : AbstractSingleton<InputManager>
         {
             Vector2 selectionStart = cursorHandler.GetInitialPosScene();
             Vector2 selectionEnd = cursorHandler.GetCurrentPosScene();
-            pm.GetLocalPlayer().SetSelection(selectionStart, selectionEnd);
+            Player localPlayer = pm.GetLocalPlayer();
+
+            List<Actor> actorList = am.GetActors(selectionStart, selectionEnd, localPlayer);
+            localPlayer.SetSelection(actorList);
+            am.SetSelection(actorList);
         }
     }
 }

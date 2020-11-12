@@ -21,9 +21,13 @@ public class Actor : MonoBehaviour
     [SerializeField] private Queue<ActionCommand> actionCommandQueue;
     [SerializeField] private ActionCommand actionCommandCurrent;
 
+    //[Header("Selection")]
+    //[SerializeField] private SelectionIndicator selectionIndicator;
+
     public string GetGameName() { return gameName; }
     public Player GetOwner() { return owner; }
     public Sprite GetPortraitImage() { return portraitImage; }
     public Sprite GetButtonImage() { return buttonImage; }
     public CommandCard GetCommandCard() { return commandCard; }
+    //public SelectionIndicator SelectionIndicator { get { return selectionIndicator; } set { selectionIndicator = value; } }
 }
