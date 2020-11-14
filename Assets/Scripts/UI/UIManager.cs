@@ -9,33 +9,22 @@ public class UIManager : AbstractSingleton<UIManager>
     [SerializeField] private UIHandler uiHandler;
 
     [Header("Menu/Panel processing")]
-    //TODO: have this both variabels in UIManger
-    [SerializeField] private MenuInput currentMenuInput;
+    //TODO: have this both variabels in UIHandler?
     [SerializeField] private UIPanel panelUnderCursor;
+    [SerializeField] private MenuInputState currentMenuInputState;
 
     [Header("Selection processing")]
     [SerializeField] private List<UIPanel> selectionIndicatorList = new List<UIPanel>();
 
     private void Update()
     {
-        PlayerManager pm = PlayerManager.Instance;
-        Player localPlayer = pm.GetLocalPlayer();
-        uiHandler.UpdatePanels(localPlayer);
-
-        UpdateSelection();
-        UpdatePanels();
-
-        //selectionIndicatorList
+        uiHandler.UpdatePanels();
     }
 
-    private void UpdateSelection() { }
-
-    private void UpdatePanels() { }
-
     public UIPanel GetPanelUnderCursor() { return panelUnderCursor; }
-    public bool HasMenuOpen() { return currentMenuInput != MenuInput.NONE; }
+    public bool HasMenuOpen() { return currentMenuInputState != MenuInputState.NONE; }
 
-    public void ToogleMenu(MenuInput menuInput)
+    public void ToogleMenu(MenuInputState menuInput)
     {
         //TODO: make this return an MenuInput and use this in UIManager
         uiHandler.ToogleMenu(menuInput);
@@ -53,5 +42,17 @@ public class UIManager : AbstractSingleton<UIManager>
     public void ExitPanelUnderCursor(UIPanel uiPanel)
     {
         if (panelUnderCursor == uiPanel) panelUnderCursor = null;
+    }
+
+    public void MultipleSelectionButton(List<Actor> actorList)
+    {
+        ActorManager am = ActorManager.Instance;
+        am.SetSelection(actorList);
+    }
+
+    public void CommandCardButton(Action action)
+    {
+        InputManager im = InputManager.Instance;
+        im.CallAction(action);
     }
 }

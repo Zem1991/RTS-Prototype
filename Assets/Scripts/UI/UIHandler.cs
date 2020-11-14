@@ -14,13 +14,19 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private UIPanel_SelectionDetails selectionDetails;
     [SerializeField] private UIPanel_CommandCard commandCard;
 
-    public void UpdatePanels(Player localPlayer)
+    public void UpdatePanels()
     {
+        PlayerManager pm = PlayerManager.Instance;
+        Player localPlayer = pm.GetLocalPlayer();
         List<Actor> selectedActorList = localPlayer.GetSelection();
         Actor selectedRelevantActor = localPlayer.GetSelectionRelevantActor();
 
+        InputManager im = InputManager.Instance;
+        Action action = im.GetAction();
+        ActionInputState actionInputState = im.GetActionInputState();
+
         selectionDetails.UpdatePanel(selectedActorList);
-        commandCard.UpdatePanel(selectedRelevantActor);
+        commandCard.UpdatePanel(selectedRelevantActor, actionInputState, action);
     }
 
     public bool HasMenuOpen()
@@ -30,28 +36,28 @@ public class UIHandler : MonoBehaviour
     }
 
     //TODO: make this return an MenuInput and use this in UIManager
-    public void ToogleMenu(MenuInput menuInput)
+    public void ToogleMenu(MenuInputState menuInputState)
     {
         if (!HasMenuOpen())
         {
-            switch (menuInput)
+            switch (menuInputState)
             {
-                case MenuInput.ESCAPE:
+                case MenuInputState.ESCAPE:
                     //TODO: open THIS menu
                     break;
-                case MenuInput.CHAT:
+                case MenuInputState.CHAT:
                     //TODO: open THIS menu
                     break;
             }
         }
         else
         {
-            if (menuInput == MenuInput.ESCAPE)
+            if (menuInputState == MenuInputState.ESCAPE)
             {
                 //TODO: close ANY menu
             }
 
-            if (menuInput == MenuInput.CHAT)
+            if (menuInputState == MenuInputState.CHAT)
             {
                 //TODO: close THIS menu
             }

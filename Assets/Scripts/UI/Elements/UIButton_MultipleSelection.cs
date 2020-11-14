@@ -33,4 +33,12 @@ public class UIButton_MultipleSelection : MonoBehaviour
             gameObject.SetActive(true);
         }
     }
+
+    public void OnClick()
+    {
+        List<Actor> actorList = new List<Actor>();
+        actorList.Add(actor);
+        UIManager um = UIManager.Instance;
+        um.MultipleSelectionButton(actorList);
+    }
 }

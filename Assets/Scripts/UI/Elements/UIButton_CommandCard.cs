@@ -25,4 +25,10 @@ public class UIButton_CommandCard : MonoBehaviour
             gameObject.SetActive(true);
         }
     }
+
+    public void OnClick()
+    {
+        UIManager um = UIManager.Instance;
+        um.CommandCardButton(action);
+    }
 }

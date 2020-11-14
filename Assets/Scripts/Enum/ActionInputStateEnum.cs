@@ -1,4 +1,4 @@
-﻿public enum ActionInput
+﻿public enum ActionInputState
 {
     NONE,
     SELECT_OPTION,

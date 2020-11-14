@@ -21,5 +21,11 @@ public class ActorManager : AbstractSingleton<ActorManager>
 
     public List<Actor> GetActors(Vector2 selectionStart, Vector2 selectionEnd, Player owner) { return actorHandler.GetActors(selectionStart, selectionEnd, owner); }
 
-    public void SetSelection(List<Actor> currentSelection) { selectionHandler.SetSelection(currentSelection); }
+    public void SetSelection(List<Actor> currentSelection)
+    {
+        PlayerManager pm = PlayerManager.Instance;
+        Player localPlayer = pm.GetLocalPlayer();
+        localPlayer.SetSelection(currentSelection);
+        selectionHandler.SetSelection(currentSelection);
+    }
 }

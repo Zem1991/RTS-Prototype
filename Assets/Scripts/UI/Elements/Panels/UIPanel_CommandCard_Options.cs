@@ -1,15 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPanel_CommandCard : UIPanel
+public class UIPanel_CommandCard_Options : MonoBehaviour
 {
-    [Header("Modes")]
-    [SerializeField] private UIPanel_CommandCard_Actions actions;
-    [SerializeField] private UIPanel_CommandCard_Options options;
-    [SerializeField] private UIPanel_CommandCard_Targeting targeting;
-
-    //[Header("Command buttons")]
     //[SerializeField] private UIButton_CommandCard command00;
     //[SerializeField] private UIButton_CommandCard command10;
     //[SerializeField] private UIButton_CommandCard command20;
@@ -22,40 +17,39 @@ public class UIPanel_CommandCard : UIPanel
     //[SerializeField] private UIButton_CommandCard command12;
     //[SerializeField] private UIButton_CommandCard command22;
     //[SerializeField] private UIButton_CommandCard command32;
-    
-    public void UpdatePanel(Actor actor, ActionInputState actionInputState, Action action)
-    {
-        if (!actor)
-        {
-            actions.gameObject.SetActive(false);
-            options.gameObject.SetActive(false);
-            targeting.gameObject.SetActive(false);
-            return;
-        }
 
-        switch (actionInputState)
-        {
-            case ActionInputState.NONE:
-                options.gameObject.SetActive(false);
-                targeting.gameObject.SetActive(false);
-                actions.UpdatePanel(actor);
-                actions.gameObject.SetActive(true);
-                break;
-            case ActionInputState.SELECT_OPTION:
-                actions.gameObject.SetActive(false);
-                targeting.gameObject.SetActive(false);
-                options.UpdatePanel(action);
-                options.gameObject.SetActive(true);
-                break;
-            case ActionInputState.SELECT_TARGET:
-                actions.gameObject.SetActive(false);
-                options.gameObject.SetActive(false);
-                targeting.UpdatePanel(action);
-                targeting.gameObject.SetActive(true);
-                break;
-        }
-    }
-    
+    //public void UpdatePanel(Actor selectedRelevantActor, Action action, ActionInputState actionInputState)
+    //{
+    //    Action stop = null;
+    //    Action move = null;
+    //    Action defend = null;
+    //    Action attack = null;
+    //    Action cancel = null;
+
+    //    if (selectedRelevantActor)
+    //    {
+    //        CommandCard commandCard = selectedRelevantActor.GetCommandCard();
+    //        stop = commandCard.GetStop();
+    //        move = commandCard.GetMove();
+    //        defend = commandCard.GetDefend();
+    //        attack = commandCard.GetAttack();
+    //        cancel = commandCard.GetCancel();
+    //    }
+
+    //    GetButton(CommandCardButton.BTN_00).SetAction(stop);
+    //    GetButton(CommandCardButton.BTN_10).SetAction(move);
+    //    GetButton(CommandCardButton.BTN_20).SetAction(defend);
+    //    GetButton(CommandCardButton.BTN_30).SetAction(attack);
+    //    GetButton(CommandCardButton.BTN_01).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_11).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_21).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_31).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_02).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_12).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_22).SetAction(null);
+    //    GetButton(CommandCardButton.BTN_32).SetAction(cancel);
+    //}
+
     //public UIButton_CommandCard GetButton(CommandCardButton commandCardButton)
     //{
     //    UIButton_CommandCard result = null;
@@ -100,4 +94,8 @@ public class UIPanel_CommandCard : UIPanel
     //    }
     //    return result;
     //}
+    public void UpdatePanel(Action action)
+    {
+        throw new NotImplementedException();
+    }
 }

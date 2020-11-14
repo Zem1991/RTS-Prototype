@@ -1,4 +1,4 @@
-﻿public enum MenuInput
+﻿public enum MenuInputState
 {
     NONE,
     ESCAPE,

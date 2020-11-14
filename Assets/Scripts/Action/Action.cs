@@ -17,4 +17,5 @@ public class Action : MonoBehaviour
     public string GetGameName() { return gameName; }
     public Sprite GetButtonImage() { return buttonImage; }
     public ActionType GetActionType() { return actionType; }
+    public bool IsSelfCast() { return isSelfCast; }
 }
