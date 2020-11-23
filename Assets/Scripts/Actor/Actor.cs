@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Actor : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class Actor : MonoBehaviour
 
     //[Header("Selection")]
     //[SerializeField] private SelectionIndicator selectionIndicator;
+
+    private void Start()
+    {
+        //TODO: THIS SHOULD NOT BE NECESSARY
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
 
     public string GetGameName() { return gameName; }
     public Player GetOwner() { return owner; }

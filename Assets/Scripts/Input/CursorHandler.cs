@@ -10,7 +10,7 @@ public class CursorHandler : MonoBehaviour
     [SerializeField] private Vector2 currentPosScreen;
     [SerializeField] private Vector2 initialPosScreen;
     [SerializeField] private float dragDirection;
-    [SerializeField] private Vector2Int edgeCheck;
+    [SerializeField] private Vector2 edgeCheck;
 
     [Header("Scene cursor")]
     [SerializeField] private bool hasHitSomething;
@@ -23,6 +23,7 @@ public class CursorHandler : MonoBehaviour
     public bool HasSelected() { return hasSelected; }
     public Vector2 GetCurrentPosScreen() { return currentPosScreen; }
     public Vector2 GetInitialPosScreen() { return initialPosScreen; }
+    public Vector2 GetEdgeCheck() { return edgeCheck; }
     public Vector2 GetCurrentPosScene() { return currentPosScene; }
     public Vector2 GetInitialPosScene() { return initialPosScene; }
 
@@ -52,17 +53,19 @@ public class CursorHandler : MonoBehaviour
             dragDirection = Mathf.Atan2(currentPosScreen.y - initialPosScreen.y, currentPosScreen.x - initialPosScreen.x) * 180 / Mathf.PI;
         }
 
-        edgeCheck = new Vector2Int();
+        edgeCheck = new Vector2();
         if (currentPosScreen.x <= 0) edgeCheck.x--;
         if (currentPosScreen.x >= Screen.width - 1) edgeCheck.x++;
         if (currentPosScreen.y <= 0) edgeCheck.y--;
         if (currentPosScreen.y >= Screen.height - 1) edgeCheck.y++;
+        edgeCheck.Normalize();
 
+        //TODO: actually reference the Player Camera?
         Camera cam = Camera.main;
         Ray ray = cam.ScreenPointToRay(currentPosScreen);
+
         //hasHitSomething = Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity, selectionLayerMask);
         RaycastHit2D raycastHit = Physics2D.GetRayIntersection(ray);
-
         hasHitSomething = raycastHit.collider != null;
         if (hasHitSomething)
         {

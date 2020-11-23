@@ -66,6 +66,7 @@ public class UIHandler : MonoBehaviour
 
     public void DrawSelectionBox(CursorHandler cursorHandler, float canvasScaleFactor)
     {
+        //TODO: actually reference the Player Camera?
         Camera cam = Camera.main;
 
         Vector3 currentPosScene = cursorHandler.GetCurrentPosScene();

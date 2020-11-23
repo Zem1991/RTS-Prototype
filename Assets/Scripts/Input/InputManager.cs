@@ -9,6 +9,9 @@ public class InputManager : AbstractSingleton<InputManager>
     [SerializeField] private InputHandler inputHandler;
     [SerializeField] private CursorHandler cursorHandler;
 
+    //[Header("Camera processing")]
+    //[SerializeField] private new Camera camera;
+
     [Header("Action processing")]
     [SerializeField] private Action action;
     [SerializeField] private ActionInputState actionInputState;
@@ -20,6 +23,7 @@ public class InputManager : AbstractSingleton<InputManager>
         UpdateMenus();
         if (!uim.HasMenuOpen())
         {
+            CameraInteraction();
             CursorInteraction();
 
             CommandCard();
@@ -64,6 +68,16 @@ public class InputManager : AbstractSingleton<InputManager>
 
         UIManager uim = UIManager.Instance;
         uim.ToogleMenu(newMenuInputState);
+    }
+
+    private void CameraInteraction()
+    {
+        Vector2 inputCameraMovement = inputHandler.CameraMovement();
+        Vector2 cursorEdgeCheck = cursorHandler.GetEdgeCheck();
+        //Vector3 finalInput = inputCameraMovement + cursorEdgeCheck;
+        Vector3 finalInput = inputCameraMovement;
+        CameraManager cm = CameraManager.Instance;
+        cm.MoveCamera(finalInput);
     }
 
     private void CursorInteraction()

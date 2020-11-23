@@ -45,6 +45,7 @@ public class InputHandler : MonoBehaviour
         Vector3 result = new Vector3();
         result.x = Input.GetAxis(cursorX);
         result.y = Input.GetAxis(cursorY);
+        result.Normalize();
         //if (normalize) result.Normalize();
         return result;
     }
