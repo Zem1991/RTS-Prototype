@@ -8,13 +8,7 @@ public class InputManager : AbstractSingleton<InputManager>
     [Header("Self references")]
     [SerializeField] private InputHandler inputHandler;
     [SerializeField] private CursorHandler cursorHandler;
-
-    //[Header("Camera processing")]
-    //[SerializeField] private new Camera camera;
-
-    [Header("Action processing")]
-    [SerializeField] private Action action;
-    [SerializeField] private ActionInputState actionInputState;
+    [SerializeField] private ActionHandler actionHandler;
 
     private void Update()
     {
@@ -41,6 +35,7 @@ public class InputManager : AbstractSingleton<InputManager>
             BasicSelectionAndCommands(im, pm);
             */
 
+            ActionInputState actionInputState = GetActionInputState();
             switch (actionInputState)
             {
                 case ActionInputState.NONE:
@@ -74,6 +69,7 @@ public class InputManager : AbstractSingleton<InputManager>
     {
         Vector2 inputCameraMovement = inputHandler.CameraMovement();
         Vector2 cursorEdgeCheck = cursorHandler.GetEdgeCheck();
+        //TODO: readd this later!
         //Vector3 finalInput = inputCameraMovement + cursorEdgeCheck;
         Vector3 finalInput = inputCameraMovement;
         CameraManager cm = CameraManager.Instance;
@@ -85,20 +81,47 @@ public class InputManager : AbstractSingleton<InputManager>
         UIManager uim = UIManager.Instance;
         PlayerManager pm = PlayerManager.Instance;
         ActorManager am = ActorManager.Instance;
-
         UIPanel panelUnderCursor = uim.GetPanelUnderCursor();
+
         bool selection = inputHandler.CursorSelection();
         bool selectionDown = inputHandler.CursorSelectionDown();
         bool selectionUp = inputHandler.CursorSelectionUp();
+        bool decisionDown = inputHandler.CursorDecisionDown();
+        bool hasAction = actionHandler.GetAction();
+
         cursorHandler.ReadCursor(panelUnderCursor, selection, selectionDown, selectionUp);
+        if (hasAction)
+        {
+            if (selectionDown)
+            {
+                actionHandler.ClearAction();
+                return;
+            }
+
+            if (decisionDown)
+            {
+                Vector3 targetPosition = cursorHandler.GetCurrentPosScene();
+                Actor targetActor = cursorHandler.GetActorFound();
+                actionHandler.SetTarget(targetPosition, targetActor);
+                actionHandler.ExecuteAction();
+                return;
+            }
+        }
 
         uim.DrawSelectionBox(cursorHandler);
         if (cursorHandler.HasSelected())
         {
             Vector2 selectionStart = cursorHandler.GetInitialPosScene();
             Vector2 selectionEnd = cursorHandler.GetCurrentPosScene();
+            List<Actor> actorList = am.GetActors(selectionStart, selectionEnd);
+
             Player localPlayer = pm.GetLocalPlayer();
-            List<Actor> actorList = am.GetActors(selectionStart, selectionEnd, localPlayer);
+            List<Actor> filteredActorList = new List<Actor>();
+            foreach (Actor forActor in actorList)
+            {
+                if (forActor.GetOwner() == localPlayer) filteredActorList.Add(forActor);
+            }
+            //TODO: allow selecting an single enemy Actor
             am.SetSelection(actorList);
         }
     }
@@ -114,6 +137,7 @@ public class InputManager : AbstractSingleton<InputManager>
         Actor selectionRelevantActor = localPlayer.GetSelectionRelevantActor();
         if (!selectionRelevantActor) return;
 
+        Action action = null;
         CommandCard commandCard = selectionRelevantActor.GetCommandCard();
         switch (ccBtn)
         {
@@ -146,20 +170,10 @@ public class InputManager : AbstractSingleton<InputManager>
             case CommandCardButton.BTN_32:
                 break;
         }
-        if (action) CallAction(action);
+        if (action) SetAction(action);
     }
 
-    //TODO: send this to an ActionHandler class?
-    public void CallAction(Action action)
-    {
-        this.action = action;
-        Debug.Log(action.GetGameName());
-        if (!action.IsSelfCast()) actionInputState = ActionInputState.SELECT_TARGET;
-        else actionInputState = ActionInputState.NONE;
-        //TODO: more!
-        //this.action = null;
-    }
-
-    public Action GetAction() { return action; }
-    public ActionInputState GetActionInputState() { return actionInputState; }
+    public ActionInputState GetActionInputState() { return actionHandler.GetActionInputState(); }
+    public Action GetAction() { return actionHandler.GetAction(); }
+    public void SetAction(Action action) { actionHandler.SetAction(action); }
 }

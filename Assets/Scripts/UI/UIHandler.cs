@@ -92,4 +92,10 @@ public class UIHandler : MonoBehaviour
         selectionBox.sizeDelta = selectionBoxRect.size;
         selectionBox.gameObject.SetActive(true);
     }
+
+    public void CommandCardButton(Action action)
+    {
+        InputManager im = InputManager.Instance;
+        im.SetAction(action);
+    }
 }

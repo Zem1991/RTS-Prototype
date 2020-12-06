@@ -19,5 +19,6 @@
     //ABILITY_4           //  V               V
     ABILITY,            //  Z to V          Z to V
     PRODUCE,            //  Full Grid       Full Grid
-    RESEARCH            //  Full Grid       Full Grid
+    RESEARCH,           //  Full Grid       Full Grid
+    SHOW_OPTIONS
 }

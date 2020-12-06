@@ -52,7 +52,6 @@ public class UIManager : AbstractSingleton<UIManager>
 
     public void CommandCardButton(Action action)
     {
-        InputManager im = InputManager.Instance;
-        im.CallAction(action);
+        uiHandler.CommandCardButton(action);
     }
 }

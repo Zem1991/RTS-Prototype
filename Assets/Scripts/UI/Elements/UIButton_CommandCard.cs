@@ -28,7 +28,7 @@ public class UIButton_CommandCard : MonoBehaviour
 
     public void OnClick()
     {
-        UIManager um = UIManager.Instance;
-        um.CommandCardButton(action);
+        UIManager uim = UIManager.Instance;
+        uim.CommandCardButton(action);
     }
 }

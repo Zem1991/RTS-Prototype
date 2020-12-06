@@ -2,20 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action : MonoBehaviour
+public partial class Action : MonoBehaviour
 {
-    [Header("Identification")]
-    [SerializeField] private string gameName;
+    public virtual bool Initialize(Actor caster, Vector3 targetPosition, Actor targetActor)
+    {
+        //This is called at the same frame an action is started.
+        //Use this method to deduct action costs or to create its initial effects.
+        //When TRUE is returned, the action is considered to be successfully initialized.
+        return true;
+    }
 
-    [Header("Graphics")]
-    [SerializeField] private Sprite buttonImage;
+    public virtual bool Execute(Actor caster, Vector3 targetPosition, Actor targetActor)
+    {
+        //This is called right after the action is started.
+        //Use this method for repeating effects.
+        //When TRUE is returned, the action is considered to have its execution working as intended.
+        return true;
+    }
 
-    [Header("Settings")]
-    [SerializeField] private ActionType actionType;
-    [SerializeField] private bool isSelfCast;
+    public virtual bool IsComplete(Actor caster, Vector3 targetPosition, Actor targetActor)
+    {
+        //This is called right after the Execute method.
+        //When TRUE is returned, the action will be considered completed.
+        return true;
+    }
 
-    public string GetGameName() { return gameName; }
-    public Sprite GetButtonImage() { return buttonImage; }
-    public ActionType GetActionType() { return actionType; }
-    public bool IsSelfCast() { return isSelfCast; }
+    public virtual bool Finalize(Actor caster, Vector3 targetPosition, Actor targetActor)
+    {
+        //This is called right after the action is marked as complete.
+        //Use this method to create its final effects.
+        //When TRUE is returned, the action is considered to be successfully finalized.
+        return true;
+    }
 }

@@ -53,7 +53,7 @@ public class InputHandler : MonoBehaviour
     public bool CursorSelection() { return Input.GetKey(cursorSelection); }
     public bool CursorSelectionDown() { return Input.GetKeyDown(cursorSelection); }
     public bool CursorSelectionUp() { return Input.GetKeyUp(cursorSelection); }
-    public bool IsSelecting() { return CursorSelection() || CursorSelectionDown() || CursorSelectionUp(); }
+    //public bool IsSelecting() { return CursorSelection() || CursorSelectionDown() || CursorSelectionUp(); }
 
     //public bool CursorDecision() { return Input.GetKey(cursorDecision); }
     public bool CursorDecisionDown() { return Input.GetKeyDown(cursorDecision); }

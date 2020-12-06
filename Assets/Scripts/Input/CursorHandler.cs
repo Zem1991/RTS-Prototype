@@ -18,14 +18,18 @@ public class CursorHandler : MonoBehaviour
     [SerializeField] private Collider2D colliderFound;
     [SerializeField] private Vector3 currentPosScene;
     [SerializeField] private Vector3 initialPosScene;
+    [SerializeField] private Actor actorFound;
 
     //public bool IsSelecting() { return isSelecting; }
     public bool HasSelected() { return hasSelected; }
     public Vector2 GetCurrentPosScreen() { return currentPosScreen; }
     public Vector2 GetInitialPosScreen() { return initialPosScreen; }
     public Vector2 GetEdgeCheck() { return edgeCheck; }
+
+    //public Collider2D GetColliderFound() { return colliderFound; }
     public Vector2 GetCurrentPosScene() { return currentPosScene; }
     public Vector2 GetInitialPosScene() { return initialPosScene; }
+    public Actor GetActorFound() { return actorFound; }
 
     public void ReadCursor(UIPanel panelUnderCursor, bool selection, bool selectionDown, bool selectionUp)
     {
@@ -77,6 +81,11 @@ public class CursorHandler : MonoBehaviour
         else
         {
             colliderFound = null;
+        }
+
+        if (colliderFound)
+        {
+            actorFound = colliderFound.GetComponent<Actor>();
         }
     }
 }

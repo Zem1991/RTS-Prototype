@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] private List<Actor> selection;
     [SerializeField] private Actor selectionRelevantActor;
 
+    public List<Actor> GetSelection() { return selection; }
+    public Actor GetSelectionRelevantActor() { return selectionRelevantActor; }
+
     public void ClearSelection()
     {
         selection.Clear();
@@ -29,7 +32,4 @@ public class Player : MonoBehaviour
             selectionRelevantActor = selection[0];
         }
     }
-
-    public List<Actor> GetSelection() { return selection; }
-    public Actor GetSelectionRelevantActor() { return selectionRelevantActor; }
 }
