@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Fog of War Current
+  - Fog of War Previous
   - Map Ground
   - Map Water
   - Map Obstacles
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fog of War Current
+    uniqueID: 1137799873
+    locked: 0
+  - name: Fog of War Previous
+    uniqueID: 2588898589
     locked: 0

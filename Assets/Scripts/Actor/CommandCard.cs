@@ -15,4 +15,14 @@ public class CommandCard : MonoBehaviour
     public Action GetDefend() { return defend; }
     public Action GetAttack() { return attack; }
     //public Action GetCancel() { return cancel; }
+
+    public bool HasAction(Action action)
+    {
+        if (stop == action) return true;
+        if (move == action) return true;
+        if (defend == action) return true;
+        if (attack == action) return true;
+        //TODO: add more?
+        return false;
+    }
 }

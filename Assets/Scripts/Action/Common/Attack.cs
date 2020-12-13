@@ -12,7 +12,9 @@ public class Attack : Action
 
     public override bool IsComplete(Actor caster, Vector3 targetPosition, Actor targetActor)
     {
+        bool result = caster.CheckDestinationReached();
+        if (targetActor) result = targetActor.IsDead();
         //TODO: check if caster can still reach target position, last known position or something
-        return targetActor.IsDead();
+        return result;
     }
 }

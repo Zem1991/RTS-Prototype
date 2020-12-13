@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Stop : Action 
 {
-    public override bool Initialize(Actor caster, Vector3 targetPosition, Actor targetActor)
+    public override bool Finalize(Actor caster, Vector3 targetPosition, Actor targetActor)
     {
-        caster.ClearActionCommands();
+        caster.ClearActionInstances();
         //TODO: stop attacking?
+        caster.SetDestination(caster.transform.position, null);
+        Debug.Log("Stop!");
         return true;
     }
 }

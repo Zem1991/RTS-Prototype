@@ -28,7 +28,7 @@ public partial class Actor : MonoBehaviour
         destinationPosition = destinationActor ? destinationActor.transform.position : targetPosition;
 
         Vector3 position = transform.position;
-        if (position == destinationPosition) return;
+        //if (position == destinationPosition) return;
 
         if (retreatDistance > 0)
         {
@@ -43,8 +43,8 @@ public partial class Actor : MonoBehaviour
                     destinationPosition = hit.position;
                 }
             }
-
         }
+
         navMeshAgent.SetDestination(destinationPosition);
         navMeshAgent.stoppingDistance = stoppingDistance;
     }

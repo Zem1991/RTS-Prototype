@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ActionHandler : MonoBehaviour
 {
+    [Header("Prefabs")]
+    [SerializeField] private ActionInstance prefabActionInstance;
+
     //[Header("Default actions")]
 
     //[Header("Current action")]
@@ -20,6 +23,12 @@ public class ActionHandler : MonoBehaviour
     public Action GetAction() { return action; }
     public ActionInputState GetActionInputState() { return actionInputState; }
 
+    public void SetTarget(Vector3 targetPosition, Actor targetActor)
+    {
+        this.targetPosition = targetPosition;
+        this.targetActor = targetActor;
+    }
+
     public void ClearAction()
     {
         action = null;
@@ -28,7 +37,7 @@ public class ActionHandler : MonoBehaviour
         targetActor = null;
     }
 
-    public void SetAction(Action action)
+    public void SetAction(Action action, bool addToQueue)
     {
         this.action = action;
         if (action.GetActionType() == ActionType.SHOW_OPTIONS)
@@ -42,11 +51,11 @@ public class ActionHandler : MonoBehaviour
         else
         {
             actionInputState = ActionInputState.NONE;
-            ExecuteAction();
+            ExecuteAction(addToQueue);
         }
     }
 
-    public bool ExecuteAction()
+    public bool ExecuteAction(bool addToQueue)
     {
         //TODO: add an check here before doing whatever Action!
         //if (false)
@@ -58,17 +67,35 @@ public class ActionHandler : MonoBehaviour
         Player localPlayer = pm.GetLocalPlayer();
         List<Actor> actorList = localPlayer.GetSelection();
 
-        ActorManager am = ActorManager.Instance;
-        //TODO: when pressing SHIFT, Actions can be queued on each selected Actor.
-        am.ExecuteAction(action, actorList, targetPosition, targetActor);
+        //ActorManager am = ActorManager.Instance;
+        foreach (Actor forActor in actorList)
+        {
+            ActionInstance newAI = CreateActionInstance(action, forActor, targetPosition, targetActor);
+            forActor.SetActionInstance(newAI, addToQueue);
+        }
 
         ClearAction();
         return true;
     }
 
-    public void SetTarget(Vector3 targetPosition, Actor targetActor)
+    public void ExecuteRightClick(bool addToQueue)
     {
-        this.targetPosition = targetPosition;
-        this.targetActor = targetActor;
+        PlayerManager pm = PlayerManager.Instance;
+        Player localPlayer = pm.GetLocalPlayer();
+        List<Actor> actorList = localPlayer.GetSelection();
+
+        foreach (Actor forActor in actorList)
+        {
+            Action action = forActor.FindRightClickAction(targetPosition, targetActor);
+            ActionInstance newAI = CreateActionInstance(action, forActor, targetPosition, targetActor);
+            forActor.SetActionInstance(newAI, addToQueue);
+        }
+    }
+
+    public ActionInstance CreateActionInstance(Action action, Actor actor, Vector3 targetPosition, Actor targetActor)
+    {
+        ActionInstance result = Instantiate(prefabActionInstance, actor.transform);
+        result.Constructor(action, actor, targetPosition, targetActor);
+        return result;
     }
 }

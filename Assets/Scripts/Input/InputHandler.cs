@@ -35,11 +35,15 @@ public class InputHandler : MonoBehaviour
     [SerializeField] private KeyCode command22 = KeyCode.C;
     [SerializeField] private KeyCode command32 = KeyCode.V;
 
+    [Header("Input modifiers")]
+    [SerializeField] private KeyCode leftShift = KeyCode.LeftShift;
+    [SerializeField] private KeyCode rightShift = KeyCode.RightShift;
+
     #region General
     public bool EscapeMenu() { return Input.GetKeyDown(escapeMenu); }
     #endregion
 
-    #region Cursor
+    #region Cursor control
     public Vector2 CursorMovement()
     {
         Vector3 result = new Vector3();
@@ -60,7 +64,7 @@ public class InputHandler : MonoBehaviour
     //public bool CursorDecisionUp() { return Input.GetKeyUp(cursorDecision); }
     #endregion
 
-    #region Camera
+    #region Camera control
     public Vector2 CameraMovement()
     {
         Vector2 result = new Vector3();
@@ -86,23 +90,42 @@ public class InputHandler : MonoBehaviour
     }
     #endregion
 
-    #region Command
-    public CommandCardButton CommandCard()
+    #region Command card
+    public CommandCardButton CommandCard(bool useFullGrid)
     {
         CommandCardButton result = CommandCardButton.NONE;
-        if (Input.GetKeyDown(command00)) result = CommandCardButton.BTN_00;
-        if (Input.GetKeyDown(command10)) result = CommandCardButton.BTN_10;
-        if (Input.GetKeyDown(command20)) result = CommandCardButton.BTN_20;
-        if (Input.GetKeyDown(command30)) result = CommandCardButton.BTN_30;
-        if (Input.GetKeyDown(command01)) result = CommandCardButton.BTN_01;
-        if (Input.GetKeyDown(command11)) result = CommandCardButton.BTN_11;
-        if (Input.GetKeyDown(command21)) result = CommandCardButton.BTN_21;
-        if (Input.GetKeyDown(command31)) result = CommandCardButton.BTN_31;
-        if (Input.GetKeyDown(command02)) result = CommandCardButton.BTN_02;
-        if (Input.GetKeyDown(command12)) result = CommandCardButton.BTN_12;
-        if (Input.GetKeyDown(command22)) result = CommandCardButton.BTN_22;
-        if (Input.GetKeyDown(command32)) result = CommandCardButton.BTN_32;
+        if (useFullGrid)
+        {
+            if (Input.GetKeyDown(command00)) result = CommandCardButton.BTN_00;
+            if (Input.GetKeyDown(command10)) result = CommandCardButton.BTN_10;
+            if (Input.GetKeyDown(command20)) result = CommandCardButton.BTN_20;
+            if (Input.GetKeyDown(command30)) result = CommandCardButton.BTN_30;
+            if (Input.GetKeyDown(command01)) result = CommandCardButton.BTN_01;
+            if (Input.GetKeyDown(command11)) result = CommandCardButton.BTN_11;
+            if (Input.GetKeyDown(command21)) result = CommandCardButton.BTN_21;
+            if (Input.GetKeyDown(command31)) result = CommandCardButton.BTN_31;
+            if (Input.GetKeyDown(command02)) result = CommandCardButton.BTN_02;
+            if (Input.GetKeyDown(command12)) result = CommandCardButton.BTN_12;
+            if (Input.GetKeyDown(command22)) result = CommandCardButton.BTN_22;
+            if (Input.GetKeyDown(command32)) result = CommandCardButton.BTN_32;
+        }
+        else
+        {
+            //Using WASD-safe Grid
+            if (Input.GetKeyDown(command00)) result = CommandCardButton.BTN_00;
+            if (Input.GetKeyDown(command20)) result = CommandCardButton.BTN_10;
+            if (Input.GetKeyDown(command30)) result = CommandCardButton.BTN_20;
+            if (Input.GetKeyDown(command31)) result = CommandCardButton.BTN_30;
+            if (Input.GetKeyDown(command02)) result = CommandCardButton.BTN_02;
+            if (Input.GetKeyDown(command12)) result = CommandCardButton.BTN_12;
+            if (Input.GetKeyDown(command22)) result = CommandCardButton.BTN_22;
+            if (Input.GetKeyDown(command32)) result = CommandCardButton.BTN_32;
+        }
         return result;
     }
+    #endregion
+
+    #region Input modifiers
+    public bool ShiftModifier() { return Input.GetKey(leftShift) || Input.GetKey(rightShift); }
     #endregion
 }

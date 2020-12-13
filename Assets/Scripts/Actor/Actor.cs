@@ -39,7 +39,7 @@ public partial class Actor : MonoBehaviour
     {
         UpdateKnownActors();
 
-        if (!SelectAndPerformAction())
+        if (!ExecuteActions())
         {
             if (ShouldMakeDecision()) MakeDecision();
         }

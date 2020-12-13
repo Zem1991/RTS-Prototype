@@ -20,7 +20,7 @@ public class CursorHandler : MonoBehaviour
     [SerializeField] private Vector3 initialPosScene;
     [SerializeField] private Actor actorFound;
 
-    //public bool IsSelecting() { return isSelecting; }
+    public bool IsSelecting() { return isSelecting; }
     public bool HasSelected() { return hasSelected; }
     public Vector2 GetCurrentPosScreen() { return currentPosScreen; }
     public Vector2 GetInitialPosScreen() { return initialPosScreen; }
@@ -88,4 +88,6 @@ public class CursorHandler : MonoBehaviour
             actorFound = colliderFound.GetComponent<Actor>();
         }
     }
+    
+    public void CancelSelecting() { isSelecting = false; }
 }

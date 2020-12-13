@@ -22,19 +22,6 @@ public class InputManager : AbstractSingleton<InputManager>
 
             CommandCard();
 
-            /*
-            //Those require all but their own locks.
-            Windows(im, pm);
-            Chat(im, pm);
-            CandidateAction(im, pm);
-            SelectionBox(im, pm);
-            Construction(im, pm);
-
-            //Those require all locks at once.
-            QuickSelections(im, pm);
-            BasicSelectionAndCommands(im, pm);
-            */
-
             ActionInputState actionInputState = GetActionInputState();
             switch (actionInputState)
             {
@@ -94,16 +81,40 @@ public class InputManager : AbstractSingleton<InputManager>
         {
             if (selectionDown)
             {
+                cursorHandler.CancelSelecting();
                 actionHandler.ClearAction();
                 return;
             }
 
             if (decisionDown)
             {
-                Vector3 targetPosition = cursorHandler.GetCurrentPosScene();
-                Actor targetActor = cursorHandler.GetActorFound();
-                actionHandler.SetTarget(targetPosition, targetActor);
-                actionHandler.ExecuteAction();
+                if (!panelUnderCursor)
+                {
+                    Vector3 targetPosition = cursorHandler.GetCurrentPosScene();
+                    Actor targetActor = cursorHandler.GetActorFound();
+                    bool addToQueue = inputHandler.ShiftModifier();
+                    actionHandler.SetTarget(targetPosition, targetActor);
+                    actionHandler.ExecuteAction(addToQueue);
+                }
+                return;
+            }
+        }
+        else
+        {
+            if (decisionDown)
+            {
+                if (cursorHandler.IsSelecting())
+                {
+                    cursorHandler.CancelSelecting();
+                }
+                else if (!panelUnderCursor)
+                {
+                    Vector3 targetPosition = cursorHandler.GetCurrentPosScene();
+                    Actor targetActor = cursorHandler.GetActorFound();
+                    bool addToQueue = inputHandler.ShiftModifier();
+                    actionHandler.SetTarget(targetPosition, targetActor);
+                    actionHandler.ExecuteRightClick(addToQueue);
+                }
                 return;
             }
         }
@@ -111,6 +122,8 @@ public class InputManager : AbstractSingleton<InputManager>
         uim.DrawSelectionBox(cursorHandler);
         if (cursorHandler.HasSelected())
         {
+            actionHandler.ClearAction();
+
             Vector2 selectionStart = cursorHandler.GetInitialPosScene();
             Vector2 selectionEnd = cursorHandler.GetCurrentPosScene();
             List<Actor> actorList = am.GetActors(selectionStart, selectionEnd);
@@ -129,7 +142,8 @@ public class InputManager : AbstractSingleton<InputManager>
     //TODO: send this to an ActionHandler class?
     private void CommandCard()
     {
-        CommandCardButton ccBtn = inputHandler.CommandCard();
+        bool useFullGrid = actionHandler.GetActionInputState() == ActionInputState.SELECT_OPTION;
+        CommandCardButton ccBtn = inputHandler.CommandCard(useFullGrid);
         if (ccBtn == CommandCardButton.NONE) return;
 
         PlayerManager pm = PlayerManager.Instance;
@@ -139,6 +153,7 @@ public class InputManager : AbstractSingleton<InputManager>
 
         Action action = null;
         CommandCard commandCard = selectionRelevantActor.GetCommandCard();
+        //TODO: use an different approach for Options
         switch (ccBtn)
         {
             case CommandCardButton.BTN_00:
@@ -175,5 +190,10 @@ public class InputManager : AbstractSingleton<InputManager>
 
     public ActionInputState GetActionInputState() { return actionHandler.GetActionInputState(); }
     public Action GetAction() { return actionHandler.GetAction(); }
-    public void SetAction(Action action) { actionHandler.SetAction(action); }
+
+    public void SetAction(Action action)
+    {
+        bool addToQueue = inputHandler.ShiftModifier();
+        actionHandler.SetAction(action, addToQueue);
+    }
 }

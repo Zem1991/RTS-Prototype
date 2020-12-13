@@ -7,6 +7,7 @@ public class CameraManager : AbstractSingleton<CameraManager>
     [Header("Self references")]
     [SerializeField] private CameraHandler cameraHandler;
     [SerializeField] private MinimapHandler minimapHandler;
+    [SerializeField] private FogOfWarHandler fogOfWarHandler;
 
     public void MoveCamera(Vector3 movement)
     {

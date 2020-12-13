@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class ActorHandler : MonoBehaviour
 {
-    [Header("Prefabs")]
-    [SerializeField] private ActionInstance prefabActionCommand;
-
     [Header("Actors")]
     [SerializeField] private Transform actorWrapper;
     [SerializeField] private List<Actor> actorList = new List<Actor>();
 
-    public void ExecuteAction(Action action, List<Actor> actorList, Vector3 targetPosition, Actor targetActor)
-    {
-        foreach (Actor forActor in actorList)
-        {
-            ActionInstance newAC = Instantiate(prefabActionCommand, forActor.transform);
-            newAC.Constructor(action, forActor, targetPosition, targetActor);
-            //TODO: when holding SHIFT, use AddActionCommand instead
-            forActor.SetActionCommand(newAC);
-        }
-    }
+    //public void ExecuteAction(Action action, Actor actor, Vector3 targetPosition, Actor targetActor)
+    //{
+    //    //TODO: check if actor really has this action available in its command card
+    //    ActionInstance newAC = Instantiate(prefabActionCommand, actor.transform);
+    //    newAC.Constructor(action, actor, targetPosition, targetActor);
+    //    //TODO: when holding SHIFT, use AddActionCommand instead
+    //    actor.SetActionInstance(newAC);
+    //}
 
     //TODO: this, when its necessary
     //public void RemoveActors(List<Actor> actors)
@@ -59,7 +54,7 @@ public class ActorHandler : MonoBehaviour
             foreach (Collider2D forCollider in colliders)
             {
                 Actor forActor = forCollider.GetComponent<Actor>();
-                result.Add(forActor);
+                if (forActor) result.Add(forActor);
             }
         }
         return result;

@@ -20,10 +20,10 @@ public class ActorManager : AbstractSingleton<ActorManager>
         actorHandler.AddActors(actorList);
     }
     
-    public void ExecuteAction(Action action, List<Actor> actorList, Vector3 targetPosition, Actor targetActor)
-    {
-        actorHandler.ExecuteAction(action, actorList, targetPosition, targetActor);
-    }
+    //public void ExecuteAction(Action action, Actor actor, Vector3 targetPosition, Actor targetActor)
+    //{
+    //    actorHandler.ExecuteAction(action, actor, targetPosition, targetActor);
+    //}
 
     public List<Actor> GetActors(Vector2 selectionStart, Vector2 selectionEnd) { return actorHandler.GetActors(selectionStart, selectionEnd); }
 

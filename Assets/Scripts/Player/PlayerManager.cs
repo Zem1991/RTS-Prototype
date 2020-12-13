@@ -11,4 +11,10 @@ public class PlayerManager : AbstractSingleton<PlayerManager>
     {
         return localPlayer;
     }
+    
+    //public Actor GetLocalPlayerSelectionRelevantActor()
+    //{
+    //    Actor result = localPlayer.GetSelectionRelevantActor();
+    //    return result;
+    //}
 }

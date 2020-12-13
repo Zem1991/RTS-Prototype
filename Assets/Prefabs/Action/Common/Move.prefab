@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810941962509162117}
-  - component: {fileID: 8895945630739299636}
+  - component: {fileID: 1584140404165078991}
   m_Layer: 0
   m_Name: Move
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8895945630739299636
+--- !u!114 &1584140404165078991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,11 +40,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8548584815462576265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea18f8a27400fa741bcec36a440b3bc1, type: 3}
+  m_Script: {fileID: 11500000, guid: c3fe0688f2b91774c9b6e440532e5065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeCost: 0
+  goldCost: 0
+  crystalCost: 0
+  supplyCost: 0
+  healthCost: 0
+  manaCost: 0
   gameName: Move
   buttonImage: {fileID: 1931102796045226437, guid: 73c91d39463042a4fbc6d0c08e7994c0,
     type: 3}
   actionType: 1
   isSelfCast: 0
+  minCastRange: 0
+  maxCastRange: 0
+  cooldownCurrent: 0
+  cooldownMaximum: 0

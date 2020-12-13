@@ -14,6 +14,8 @@ public class ActionInstance : MonoBehaviour
     [Header("States")]
     [SerializeField] private bool isInExecution = false;
 
+    public Action GetAction() { return action; }
+
     public bool IsInExecution() { return isInExecution; }
 
     public void Constructor(Action action, Actor caster, Vector3 targetPosition, Actor targetActor)
